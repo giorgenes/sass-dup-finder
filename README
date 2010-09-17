@@ -1,0 +1,15 @@
+# How to use
+
+Just run sass-dup-finder.rb with the list of sass files you want o analise:
+
+$ ./sass-dup-finder.rb sass/*
+
+The output (not quite pretty yet) should be something like this:
+sass/a.scss with sass/b.scss
+equal selectors
+#<Set: {".test_same"}>
+different rules for .test_same
+    ["width"]: 100px
+
+It points you what selectors names the files have in common
+and what difference they have.

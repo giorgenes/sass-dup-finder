@@ -22,7 +22,7 @@ end
 
 files = {}
 rules = {}
-Dir["app/sass/*.scss"].each do |f|
+ARGV.each do |f|
 	files[f] = Set.new
 	rules[f] = {}
 	engine = Sass::Engine.new(File.new(f).read, :syntax => :scss)
