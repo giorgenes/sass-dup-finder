@@ -29,12 +29,10 @@ ARGV.each do |f|
 		if c.is_a?(Sass::Tree::RuleNode)
 			#ap c.rule
 			c.rule.each do |rule|
-				rule.tr(' ', '').split(",").each do |r|
+				rule.split(",").each do |r|
 					puts r
 				end
 			end
 		end
 	end
 end
-
-
